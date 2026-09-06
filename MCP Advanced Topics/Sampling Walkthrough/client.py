@@ -1,9 +1,6 @@
 import asyncio
 from dotenv import load_dotenv
 from anthropic import AsyncAnthropic
-
-# Reads ANTHROPIC_API_KEY from this lesson's .env.
-load_dotenv()
 from mcp import ClientSession, StdioServerParameters
 from mcp.client.stdio import stdio_client
 from mcp.client.session import RequestContext
@@ -13,6 +10,9 @@ from mcp.types import (
     TextContent,
     SamplingMessage,
 )
+
+# Reads ANTHROPIC_API_KEY from this lesson's .env before the client is created.
+load_dotenv()
 
 anthropic_client = AsyncAnthropic()
 model = "claude-sonnet-4-0"
