@@ -1,5 +1,19 @@
+# Secrets / local env
 .env
-__pycache__
-.venv
-.DS_Store
+.env.*
+!.env.example
+
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
 *.egg-info/
+
+# Virtual environments
+.venv
+.python-version
+
+# OS
+.DS_Store
